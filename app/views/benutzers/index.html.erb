@@ -1,0 +1,27 @@
+<h1>Listing benutzers</h1>
+
+<table>
+  <tr>
+    <th>Login</th>
+    <th>Pass</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @benutzers.each do |benutzer| %>
+  <tr>
+    <td><%= benutzer.login %></td>
+    <td><%= benutzer.pass %></td>
+    <td><%= benutzer.name %></td>
+    <td><%= link_to 'Show', benutzer %></td>
+    <td><%= link_to 'Edit', edit_benutzer_path(benutzer) %></td>
+    <td><%= link_to 'Destroy', benutzer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Benutzer', new_benutzer_path %>
