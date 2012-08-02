@@ -1,4 +1,7 @@
 class BenutzersController < ApplicationController
+
+  #todo aus diesem scaffold ein echtes Benutzspeichern machen.
+
   # GET /benutzers
   # GET /benutzers.json
   def index
@@ -24,6 +27,7 @@ class BenutzersController < ApplicationController
   # GET /benutzers/new
   # GET /benutzers/new.json
   def new
+    #todo Das Salt abhandeln
     @benutzer = Benutzer.new
 
     respond_to do |format|
